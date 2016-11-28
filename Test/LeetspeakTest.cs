@@ -30,5 +30,16 @@ namespace Leetspeak
       //Assert
       Assert.Equal(expectedResult, result);
     }
+    [Fact]
+    public void LeetspeakTranslator_replaceI_true()
+    {
+      //Arrange
+      string expectedResult = "1 r0s3";
+      LeetspeakTranslator instance = new LeetspeakTranslator("I rose");
+      //Act
+      string result = instance.Translate();
+      //Assert
+      Assert.Equal(expectedResult, result);
+    }
   }
 }

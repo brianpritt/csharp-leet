@@ -25,6 +25,10 @@ namespace Leetspeak.Objects
         {
           result = result + "0";
         }
+        else if(character == 'I')
+        {
+          result = result + "1";
+        }
         else
         {
           result = result + character;
