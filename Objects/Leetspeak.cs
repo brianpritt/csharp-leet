@@ -14,6 +14,7 @@ namespace Leetspeak.Objects
     {
       string result = "";
       char[] array = _inputString.ToCharArray();
+      int counter = 0;
 
       foreach (char character in array)
       {
@@ -29,10 +30,26 @@ namespace Leetspeak.Objects
         {
           result = result + "1";
         }
+        else if (character == 's' || character == 'S')
+        {
+          if (counter == 0)
+          {
+            result = result + character;
+          }
+          else if (array[counter-1] == ' ')
+          {
+            result = result + character;
+          }
+          else
+          {
+            result = result + "z";
+          }
+        }
         else
         {
           result = result + character;
         }
+        counter++;
       }
       return result;
     }
